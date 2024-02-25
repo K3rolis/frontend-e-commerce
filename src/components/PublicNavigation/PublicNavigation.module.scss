@@ -1,0 +1,71 @@
+@import '../../styles/variables';
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 3.75rem;
+  align-items: center;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $primary-color;
+    cursor: pointer;
+
+    &::after {
+      content: '.';
+      color: $neutral-color-04;
+    }
+  }
+
+  .navigationLinks {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    font-weight: 500;
+
+    li {
+      color: $neutral-color-04;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+
+    .active {
+      color: $neutral-color-07;
+    }
+  }
+
+  .icons {
+    display: flex;
+    column-gap: 1rem;
+
+    .search,
+    .profile {
+      width: 1.25rem;
+      height: 1.25rem;
+      cursor: pointer;
+    }
+    .shoppingBag {
+      display: flex;
+      column-gap: 0.3125rem;
+      cursor: pointer;
+
+      .shoppingBagQuantity {
+        height: 1.25rem;
+        width: 1.25rem;
+        align-self: center;
+        background-color: $neutral-color-07;
+        border-radius: 50%;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        font-weight: bold;
+        color: $color-white;
+        text-align: center;
+      }
+    }
+  }
+}
